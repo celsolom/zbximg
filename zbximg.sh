@@ -21,7 +21,6 @@
 #2017-01-23 Version 1
 
 
-
 # --- Functions  ---
 
 function exec_curl {
@@ -162,36 +161,36 @@ function img_batch_remove {
 # --- Check LANG
 if [[ $LANG == "pt_"* ]]; then
 	msg1="Digite o hostname ou FQDN do servidor ZABBIX: "
-	msg2="Digite o usu·rio: "
+	msg2="Digite o usu√°rio: "
 	msg3="Digite a senha: "
 	msg4="imagem[s] inserida[s]."
 	msg5="imagem[s] removida[s]."
-	msg6="Erro: a opÁ„o"  
+	msg6="Erro: a op√ß√£o"  
 	msg7="requer um argumento."
 	msg8="Lista de Imagens\n"
-	msg9="VocÍ deseja apagar estas imagens? " 
+	msg9="Voc√™ deseja apagar estas imagens? " 
 	msg10="\n\nCancelado."
-	msg11="È inv·lida!"
+	msg11="√© inv√°lida!"
 	msg12="
 ZBXImg 1.0 - 2017 por Celso Lira
 
-Script para inserÁ„o de imagens em batch no Zabbix 3.0
-Ao inserir, o script adiciona um UID ao fim do nome de cada imagem, para simplificar a remoÁ„o em batch.
+Script para inser√ß√£o de imagens em batch no Zabbix 3.0
+Ao inserir, o script adiciona um UID ao fim do nome de cada imagem, para simplificar a remo√ß√£o em batch.
 
-Uso: zbximg [OP«¬O]
+Uso: zbximg [OP√á√ÇO]
 	      	
-Argumentos obrigatÛrios:
--u		Nome do usu·rio Zabbix.
--p		Senha do usu·rio Zabbix.
+Argumentos obrigat√≥rios:
+-u		Nome do usu√°rio Zabbix.
+-p		Senha do usu√°rio Zabbix.
 -s		Hostname ou FQDN do servidor frontend Zabbix.
 
-Argumentos para InserÁ„o:
--i [Pasta]	Pasta com as imagens a serem inseridas. Padr„o PWD.
--e		Extens„o das imagens. Padr„o PNG.
+Argumentos para Inser√ß√£o:
+-i [Pasta]	Pasta com as imagens a serem inseridas. Padr√£o PWD.
+-e		Extens√£o das imagens. Padr√£o PNG.
 
-Argumentos para RemoÁ„o:
+Argumentos para Remo√ß√£o:
 -r [nome]	Parte do nome das imagens a serem removidas ou UID
--Y		Remover sem confirmaÁ„o
+-Y		Remover sem confirma√ß√£o
 
 "
 

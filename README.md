@@ -1,18 +1,18 @@
 # zbximg
-Tool to insert and remove images from Zabbix 3.0
+Script for inserting images in batch to Zabbix 3.0.
+When inserting, the script adds a UID to the end of the name of each image, to simplify the batch removal.
 
-ZBXImg 1.0 - 2017 por Celso Lira
-Script para inserção de imagens em batch no Zabbix 3.0
-Ao inserir, o script adiciona um UID ao fim do nome de cada imagem, para simplificar a remoção em batch.
-Uso: zbximg [OPÇÂO]
-	      	
-Argumentos obrigatórios:
--u		Nome do usuário Zabbix.
--p		Senha do usuário Zabbix.
--s		Hostname ou FQDN do servidor frontend Zabbix.
-Argumentos para Inserção:
--i [Pasta]	Pasta com as imagens a serem inseridas. Padrão PWD.
--e		Extensão das imagens. Padrão PNG.
-Argumentos para Remoção:
--r [nome]	Parte do nome das imagens a serem removidas ou UID
--Y		Remover sem confirmação
+Usage: zbximg [OPTION]
+                
+Required Arguments:
+-u              Zabbix user name.
+-p              Zabbix user password.
+-s              Hostname or FQDN of the Zabbix frontend server.
+
+Arguments for Insertion:
+-i [Folder]     Folder with the images to be inserted. Default PWD.
+-e              Extension of images. Default PNG.
+
+Arguments for Removal:
+-r [name]       Part of the name of the images to be removed or UID
+-Y              Remove without confirmation

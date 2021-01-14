@@ -23,4 +23,3 @@ Needs **jq** - https://stedolan.github.io/jq/, **base64** - https://www.gnu.org/
 **-r** *[Name]*       Part of the name of the images to be removed or UID.
 
 **-Y**              Remove without confirmation.
-teste

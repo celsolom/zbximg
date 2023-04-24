@@ -5,7 +5,7 @@
 # Batch image insertion on Zabbix
 #
 # Created by Celso Lira in 2017
-
+#
 # Need jq, base64 and curl
 
 # --- License ---
@@ -15,11 +15,11 @@
 # Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
 # Everyone is permitted to copy and distribute verbatim copies
 # of this license document, but changing it is not allowed.
-
+#
 
 # --- Changelog ---
 #2017-01-23 Version 1
-
+#
 
 # --- Functions  ---
 
@@ -57,7 +57,7 @@ function img_create {
 	# Check if type of image is blank, set to icon(1)
 	if [ -z $tipo ]; then
 		tipo=1
-	fi		
+	fi
 	
 	# $(cat $imagem | base64 -w 0)
 	
@@ -77,7 +77,7 @@ function img_create {
 	exec_curl "$json"
 }
 
-function img_batch_add {
+function img_batch_add { \
 	caminho=$1
 	ext=$2
 	
@@ -173,25 +173,20 @@ if [[ $LANG == "pt_"* ]]; then
 	msg11="é inválida!"
 	msg12="
 ZBXImg 1.0 - 2017 por Celso Lira
-
 Script para inserção de imagens em batch no Zabbix 3.0
 Ao inserir, o script adiciona um UID ao fim do nome de cada imagem, para simplificar a remoção em batch.
-
 Uso: zbximg [OPÇÂO]
 	      	
 Argumentos obrigatórios:
 -u		Nome do usuário Zabbix.
 -p		Senha do usuário Zabbix.
 -s		Hostname ou FQDN do servidor frontend Zabbix.
-
 Argumentos para Inserção:
 -i [Pasta]	Pasta com as imagens a serem inseridas. Padrão PWD.
 -e		Extensão das imagens. Padrão PNG.
-
 Argumentos para Remoção:
 -r [nome]	Parte do nome das imagens a serem removidas ou UID
 -Y		Remover sem confirmação
-
 "
 
 else
@@ -208,21 +203,17 @@ else
 	msg11="is invalid!"
 	msg12="
 ZBXImg 1.0 - 2017 by Celso Lira
-
 Script for inserting images in batch to Zabbix 3.0.
 When inserting, the script adds a UID to the end of the name of each image, to simplify the batch removal.
-
 Usage: zbximg [OPTION]
                 
 Required Arguments:
 -u 		Zabbix user name.
 -p 		Zabbix user password.
 -s 		Hostname or FQDN of the Zabbix frontend server.
-
 Arguments for Insertion:
 -i [Folder] 	Folder with the images to be inserted. Default PWD.
 -e 		Extension of images. Default PNG.
-
 Arguments for Removal:
 -r [name] 	Part of the name of the images to be removed or UID
 -Y 		Remove without confirmation
@@ -328,4 +319,3 @@ case $oper in
 esac
 
 echo -e "\n"
-

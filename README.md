@@ -2,7 +2,7 @@
 Script for inserting images in batch to Zabbix 3.0.
 When inserting, the script adds a UID to the end of the name of each image, to simplify the batch removal.
 
-Needs **jq** - https://stedolan.github.io/jq/, **base64** - https://www.gnu.org/software/coreutils/coreutils.html and **curl** - https://curl.haxx.se/
+Needs **jq** - https://stedolan.github.io/jq/, **dialog**, **base64** - https://www.gnu.org/software/coreutils/coreutils.html and **curl** - https://curl.haxx.se/
 
 ##Usage:
 **zbximg [OPTION]**
